@@ -23,6 +23,8 @@
 	background-color: var(--brand-primary);
 	line-height: 80px;
 	box-shadow: 1px 1px 10px black;
+	position: sticky;
+	top: 0;
 }
 
 
@@ -69,12 +71,15 @@
 	cursor: pointer;
 }
 
+.content {
+	height: 200vh;
+}
+
 @media screen and (max-width: 628px) {
 	.header {
 		grid-template-areas: "icon logo logo"
 							"menu menu .";
 		grid-template-columns: 20% 30% 40%;
-		position: relative;
 	}
 	
 	.header h2 {
