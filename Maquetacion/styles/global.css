@@ -25,6 +25,7 @@
 	box-shadow: 1px 1px 10px black;
 	position: sticky;
 	top: 0;
+	z-index: 1;
 }
 
 
@@ -88,9 +89,11 @@
 	}
 
 	.header__nav {
+		display: none;
 		grid-area: menu;
 		position: absolute;
 		width: 100%;
+		height: 100vh;
 		background-color: var(--brand-secondary);
 		box-shadow: 1px 5px 5px black;
 	}
