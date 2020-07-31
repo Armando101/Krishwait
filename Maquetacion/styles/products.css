@@ -1,3 +1,6 @@
+.header__prodcuts {
+	margin-top: 13%;
+}
 .content__products {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -59,6 +62,12 @@
 	transition: background 0s;
 	background-color: rgba(97, 9, 255, 0.5);
 	background-size: 100%;
+}
+
+@media screen and (max-width: 880px) {
+	.header__products {
+		margin-top: 7%;
+	}
 }
 
 @media screen and (max-width: 880px) {
