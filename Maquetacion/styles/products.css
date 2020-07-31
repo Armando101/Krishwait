@@ -3,7 +3,7 @@
 }
 .content__products {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 50px;
 	padding: 50px 20px 0px 20px;
 }
@@ -71,9 +71,6 @@
 }
 
 @media screen and (max-width: 880px) {
-	.content__products {
-		grid-template-columns: repeat(3, 1fr);
-	}
 	.panelButtons a {
 		font-size: 94%;
 	}
