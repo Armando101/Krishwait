@@ -30,7 +30,9 @@
 }
 
 
-.header h2 {
+.header h2 a {
+	display: flex;
+	justify-content: center;
 	text-align: center;
 	color: rgba(255, 255, 255, 0.9);
 	cursor: pointer;
@@ -74,7 +76,7 @@
 }
 
 .content {
-	height: 200vh;
+	height: 100%;
 	margin-top: 100px;
 }
 
