@@ -9,6 +9,7 @@
 }
 
 .content__products--card {
+	background-color: white;
 	border-radius: 10px;
 	box-shadow: 2px 2px 10px;
 }
@@ -53,7 +54,7 @@
 	background-color: rgba(97, 9, 255, 0.2);
 	border-radius: 8px;
 	
-	background-image: radial-gradient(circle, transparent 1%, rgba(97, 9, 255, 0.1, 0.1) 1%);
+	background-image: radial-gradient(circle, transparent 1%, rgba(97, 9, 255, 0.1) 1%);
 	background-position: center;
 	background-size: 15000%;
 }
