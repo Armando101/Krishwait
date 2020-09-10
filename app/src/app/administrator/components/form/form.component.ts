@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
-import { ProductsService } from '../../products/services/products.service';
+import { ProductsService } from '../../../products/services/products.service';
 
 @Component({
   selector: 'app-form',

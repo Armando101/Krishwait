@@ -24,9 +24,7 @@ export class CategoryProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.router.url);
-
-    if (this.router.url === '/cart') {
+    if (this.router.url === '/products/cart') {
       this.products = this.cartService.getCart();
       this.titleHeader = 'Carrito de compras';
       this.titleSubheader = 'Tu carrito está vacío';
