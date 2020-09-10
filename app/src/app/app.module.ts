@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -22,7 +23,8 @@ import { LayoutComponent } from './layout/layout.component';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
-    SharedModule
+    SharedModule,
+    QuicklinkModule
   ],
   providers: [],
   bootstrap: [AppComponent]

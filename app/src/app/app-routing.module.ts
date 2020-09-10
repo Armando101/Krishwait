@@ -5,9 +5,7 @@ import { AuthGuard } from './administrator/services/auth.guard';
 
 import { LayoutComponent } from './layout/layout.component';
 import { NotFoundModule } from './not-found/not-found.module';
-// import { DashboardComponent } from './administrator/dashboard/dashboard.component';
-// import { FormComponent } from './administrator/form/form.component';
-// import { TableComponent } from './administrator/table/table.component';
+import { QuicklinkStrategy } from 'ngx-quicklink';
 
 
 const routes: Routes = [
@@ -46,7 +44,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: QuicklinkStrategy,
+    initialNavigation: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
