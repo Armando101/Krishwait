@@ -23,7 +23,7 @@ const routes: Routes = [
         loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
       },
       {
-        path: 'administrator',
+        path: 'administrator', canActivate: [AuthGuard],
         loadChildren: () => import('./administrator/administrator.module').then(m => m.AdministratorModule)
       }
     ]
@@ -32,15 +32,6 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./not-found/not-found.module').then(m => NotFoundModule)
   }
-  // { path: 'home', component: CategoryProductsComponent },
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // { path: 'detailProduct/:id', component: DetailProductComponent },
-  // { path: 'cart', component: CategoryProductsComponent },
-
-  // { path: 'administrator', component: DashboardComponent, canActivate: [ AuthGuard] },
-  // { path: 'administrator/form', component: FormComponent, canActivate: [ AuthGuard] },
-  // { path: 'administrator/table', component: TableComponent, canActivate: [ AuthGuard] },
-  // { path: '**', component: Error404Component}
 ];
 
 @NgModule({

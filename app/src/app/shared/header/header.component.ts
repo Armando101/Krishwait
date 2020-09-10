@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(this.auth.loggedIn);
     this.cartService.getObservable().subscribe(response => {
         // console.log(response);
         this.countProducts = this.cartService.getCart().length;

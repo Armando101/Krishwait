@@ -20,9 +20,11 @@
     "@angular/platform-browser": "~10.0.3",
     "@angular/platform-browser-dynamic": "~10.0.3",
     "@angular/router": "~10.0.3",
-    "@auth0/auth0-spa-js": "^1.8.1",
+    "@auth0/auth0-spa-js": "^1.10.0",
     "firebase": "^7.19.0",
+    "install": "^0.13.0",
     "ngx-quicklink": "^0.2.4",
+    "npm": "^6.14.8",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
