@@ -48,7 +48,6 @@ p {
 .ProductDetail__form-btn:hover {
     background-color: var(--brand-secondary);
 }
-
 .product__image {
     max-height: 100px;
 }
