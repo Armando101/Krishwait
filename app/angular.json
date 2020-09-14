@@ -23,7 +23,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.webmanifest",
-              "./robots.txt"
+              "src/robots.txt"
             ],
             "styles": [
               "src/styles.css",
