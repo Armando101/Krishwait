@@ -7,6 +7,7 @@ import { TableComponent } from './components/table/table.component';
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'form', component: FormComponent },
+  { path: 'form/:id', component: FormComponent },
   { path: 'table', component: TableComponent },
 ];
 
