@@ -2,6 +2,9 @@
 
 .table {
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .table__title {
@@ -9,7 +12,7 @@
 }
 
 .table__content {
-    width: 100%;
+    width: 90%;
     border-spacing: 0px;
 }
 
@@ -30,4 +33,9 @@
 .table__content-body td {
     border-bottom: 2px solid black;
     padding: 10px;
+    cursor: pointer;
+}
+
+.table__content-body td:hover {
+    text-decoration: underline;
 }

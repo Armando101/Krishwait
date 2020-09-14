@@ -12,20 +12,10 @@
                 </tr>
             </thead>
             <tbody class="table__content-body">
-                <tr>
-                    <td>Tenis</td>
-                    <td>Eliminar</td>
-                    <td>Editar</td>
-                </tr>
-                <tr>
-                    <td>Camisa</td>
-                    <td>Eliminar</td>
-                    <td>Editar</td>
-                </tr>
-                <tr>
-                    <td>Balon</td>
-                    <td>Eliminar</td>
-                    <td>Editar</td>
+                <tr *ngFor="let product of products">
+                    <td routerLink="/products/detailProduct/{{product.id}}" >{{ product.title }}</td>
+                    <td (click)="deleteProduct(product.id)" >Eliminar</td>
+                    <td routerLink="/administrator/form/{{product.id}}" >Editar</td>
                 </tr>
             </tbody>
         </table>
