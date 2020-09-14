@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CartService } from '@core/services/cart/cart.service';
-import { reduce, tap } from 'rxjs/operators';
+import { reduce } from 'rxjs/operators';
 import Product from '@core/models/product.model';
 import { Observable } from 'rxjs/internal/Observable';
 @Component({
@@ -17,7 +17,7 @@ export class ProductCardComponent implements OnInit {
   public addCart = false;
 
   constructor(
-    private cart: CartService,
+    public cart: CartService,
     private route: Router
   ) { }
 
@@ -35,10 +35,6 @@ export class ProductCardComponent implements OnInit {
     .pipe(
       reduce((acc: number, curr: Product): number => curr.id === this.product.id ? acc + 1 : acc, 0)
     );
-  }
-
-  addProduct(): void {
-    this.cart.addProduct(this.product);
   }
 
   removeProduct(): void {

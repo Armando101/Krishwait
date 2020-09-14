@@ -3,14 +3,14 @@ import { HttpClient } from '@angular/common/http';
 
 import Product from '@core/models/product.model';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  public products: Product[] = [];
-  private url = 'https://us-central1-krishwait-3933a.cloudfunctions.net/api';
+  private url = environment.urlAPI;
 
   constructor(
     private http: HttpClient

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
 import Product from '@core/models/product.model';
 import { ProductsService } from '@core/services/products/products.service';
 
@@ -11,7 +10,6 @@ import { ProductsService } from '@core/services/products/products.service';
 export class TableComponent implements OnInit {
 
   public products: Product[];
-  // public products$ = from(this.products);
 
   constructor(
     private productServce: ProductsService,

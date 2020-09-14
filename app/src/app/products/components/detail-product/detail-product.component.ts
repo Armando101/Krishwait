@@ -20,7 +20,7 @@ export class DetailProductComponent implements OnInit {
     private route: ActivatedRoute,
     private productsService: ProductsService,
     private router: Router,
-    private cart: CartService
+    public cart: CartService
   ) { }
 
   ngOnInit(): void {
@@ -35,9 +35,4 @@ export class DetailProductComponent implements OnInit {
     );
 
   }
-
-  addCart(product: Product): void {
-    this.cart.addProduct(product);
-  }
-
 }

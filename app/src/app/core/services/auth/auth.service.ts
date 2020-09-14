@@ -31,7 +31,7 @@ export class AuthService {
     });
   }
 
-  login(provider: string): void {
+  login(): void {
     this.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 

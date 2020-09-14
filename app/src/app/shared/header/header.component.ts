@@ -1,8 +1,9 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 import { CartService } from '@core/services/cart/cart.service';
 import { AuthService } from '@core/services/auth/auth.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -21,17 +22,24 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    public auth: AuthService
+    public auth: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.cartService.cart$.subscribe(response => {
-        this.countProducts = this.cartService.cart.length;
-        this.animation = true;
-        setTimeout(() => {
-          this.animation = false;
-        }, 800);
-    });
+    this.animationCart();
+    // Para ocultar el menu al cambiar de ruta
+    this.router.events.subscribe(_ => this.showMenu = false);
+  }
+
+  animationCart(): void {
+    this.cartService.cart$.subscribe(_ => {
+      this.countProducts = this.cartService.cart.length;
+      this.animation = true;
+      setTimeout(() => {
+        this.animation = false;
+      }, 800);
+  });
   }
 
   @HostListener('window:beforeinstallprompt', ['$event'])

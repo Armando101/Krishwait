@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  urlAPI: 'https://us-central1-krishwait-3933a.cloudfunctions.net/api',
   firebaseConfig: {
     apiKey: 'AIzaSyCpBLOrthdzycNPLj6oYg-9uwetSmEdbwU',
     authDomain: 'krishwait-3933a.firebaseapp.com',
