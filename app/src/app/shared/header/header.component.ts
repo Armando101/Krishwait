@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CartService } from '../../products/services/cart.service';
+import { CartService } from '@core/services/cart/cart.service';
 import { AuthService } from '@core/services/auth/auth.service';
 
 @Component({
@@ -21,9 +21,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.auth.loggedIn);
-    this.cartService.getObservable().subscribe(response => {
+    this.cartService.cart$.subscribe(response => {
         // console.log(response);
-        this.countProducts = this.cartService.getCart().length;
+        this.countProducts = this.cartService.cart.length;
         this.animation = true;
         setTimeout(() => {
           this.animation = false;
