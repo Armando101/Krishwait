@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { LayoutComponent } from './layout/layout.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LayoutComponent } from './layout/layout.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     SharedModule,
-    QuicklinkModule
+    QuicklinkModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
