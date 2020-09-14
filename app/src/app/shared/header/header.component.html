@@ -14,7 +14,4 @@
             <li *ngIf="!auth.loggedIn"><a (click)="auth.logout()"><i class="material-icons">person</i><span>Log Out</span></a></li>
         </ul>
     </nav>
-    <pre *ngIf="auth.userProfile$ | async as profile">
-        <code>{{ profile | json }}</code>
-        </pre>
 </header>

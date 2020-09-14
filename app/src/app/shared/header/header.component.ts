@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CartService } from '../../products/services/cart.service';
-import { AuthService } from '../../administrator/services/auth.service';
+import { AuthService } from '@core/services/auth/auth.service';
 
 @Component({
   selector: 'app-header',

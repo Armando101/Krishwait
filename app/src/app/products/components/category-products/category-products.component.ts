@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ProductsService } from '../../services/products.service';
-import { CartService } from '../../services/cart.service';
+import { ProductsService } from '@core/services/products/products.service';
+import { CartService } from '@core/services/cart/cart.service';
 
-import Product from '../../models/product.model';
+import Product from '@core/models/product.model';
+import { distinct } from 'rxjs/operators';
 
 @Component({
   selector: 'app-category-products',
@@ -14,8 +15,8 @@ import Product from '../../models/product.model';
 export class CategoryProductsComponent implements OnInit {
 
   public products: Product[] = [];
-  public titleHeader: string;
-  public titleSubheader: string;
+  public titleHeader = 'Productos';
+  public titleSubheader = 'Loading...';
 
   constructor(
     private productsService: ProductsService,
@@ -25,15 +26,16 @@ export class CategoryProductsComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.router.url === '/products/cart') {
-      this.products = this.cartService.getCart();
+      this.cartService.getCart$().pipe(distinct(product => product.id))
+        .subscribe((products: Product) => {
+          this.products.push(products);
+        });
       this.titleHeader = 'Carrito de compras';
       this.titleSubheader = 'Tu carrito está vacío';
     } else {
       this.productsService.getProducts().subscribe( (response: Product[]) => {
         this.products = response;
       });
-      this.titleHeader = 'Productos';
-      this.titleSubheader = 'Loading...';
     }
   }
 }
