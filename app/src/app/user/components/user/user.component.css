@@ -1,0 +1,40 @@
+.content__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.content__profile--image {
+    width: 35%;
+    border-radius: 300px;
+}
+
+.content__profile--info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__profile--info p {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.content__profile--info a {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.content__profile--info a span:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 560px) {
+    .content__profile {
+        flex-direction: column;
+    }
+}

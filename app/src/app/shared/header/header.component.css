@@ -83,6 +83,13 @@
     margin-top: 100px;
 }
 
+.user__profile {
+    width: 60px;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-left: 15px;
+}
+
 @keyframes noty {
     from {
         transform: rotate(35deg);
@@ -113,7 +120,7 @@
     }
 }
 
-@media screen and (max-width: 628px) {
+@media screen and (max-width: 670px) {
     .header {
         grid-template-areas: "icon logo logo" "menu menu .";
         grid-template-columns: 20% 30% 40%;

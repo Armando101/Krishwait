@@ -1,0 +1,12 @@
+<section class="content">
+    <h2>Bienvendo a tu perfil {{ auth.user.name }}</h2>
+    <div class="content__profile">
+        <img class="content__profile--image" [src]="auth.user.photo" [alt]="auth.user.name">
+        <div class="content__profile--info">
+            <p><strong>Email:</strong> {{auth.user.email}}</p>
+            <p><strong>Salir de tu cuenta: </strong>
+                <a (click)="auth.logout()"><i class="material-icons">exit_to_app</i><span>Log Out</span></a>
+            </p>
+        </div>
+    </div>
+</section>
