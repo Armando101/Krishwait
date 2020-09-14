@@ -23,6 +23,7 @@
     "@auth0/auth0-spa-js": "^1.10.0",
     "firebase": "^7.19.0",
     "install": "^0.13.0",
+    "material-design-icons": "^3.0.1",
     "ngx-quicklink": "^0.2.4",
     "npm": "^6.14.8",
     "rxjs": "~6.5.5",
